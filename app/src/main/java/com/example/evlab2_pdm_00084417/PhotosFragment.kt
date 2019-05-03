@@ -18,16 +18,17 @@ class PhotosFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_photos, container, false)
         imgPhoto = view.findViewById(R.id.img_foto)
-        imgPhoto.setImageResource(R.drawable.ic_launcher_background)
+        imgPhoto.setImageResource(arguments!!.getInt("resource"))
         return view
     }
 
     companion object {
 
-        fun newInstance(param1: Int) =
+        fun newInstance(image: Int,position:Int) =
                 PhotosFragment().apply {
                     arguments = Bundle().apply {
-                        putInt("resource", param1)
+                        putInt("resource", image)
+                        putInt("position",position)
                 }
         }
     }
