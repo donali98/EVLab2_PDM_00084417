@@ -2,9 +2,10 @@ package com.example.evlab2_pdm_00084417
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import com.example.evlab2_pdm_00084417.fragments.PhotosFragment
+import com.example.evlab2_pdm_00084417.helpers.ButtonsHelper
 
-class MainActivity : AppCompatActivity(),ButtonsHelper {
+class MainActivity : AppCompatActivity(), ButtonsHelper {
 
     var currentPosition = 0
     var photosFragments:ArrayList<PhotosFragment> = ArrayList()
@@ -25,7 +26,6 @@ class MainActivity : AppCompatActivity(),ButtonsHelper {
     }
 
     override fun onPrevClickListener() {
-        Toast.makeText(this,currentPosition.toString(),Toast.LENGTH_LONG).show()
         if(currentPosition!=0){
             currentPosition--
             supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(currentPosition)).commit()
@@ -37,13 +37,11 @@ class MainActivity : AppCompatActivity(),ButtonsHelper {
     }
 
     override fun onNextClickListener() {
-        Toast.makeText(this,currentPosition.toString(),Toast.LENGTH_SHORT).show()
         if(currentPosition!=2){
             currentPosition++
             supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(currentPosition)).commit()
         }
         else{
-            Toast.makeText(this,"else ${currentPosition.toString()}",Toast.LENGTH_SHORT).show()
             currentPosition= 0
             supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(0)).commit()
         }

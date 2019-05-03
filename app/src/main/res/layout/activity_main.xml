@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/frm_buttons"
-        android:name="com.example.evlab2_pdm_00084417.ButtonsFragment"
+        android:name="com.example.evlab2_pdm_00084417.fragments.ButtonsFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

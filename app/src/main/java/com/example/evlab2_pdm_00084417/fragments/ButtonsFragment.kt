@@ -1,4 +1,4 @@
-package com.example.evlab2_pdm_00084417
+package com.example.evlab2_pdm_00084417.fragments
 
 
 import android.content.Context
@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.evlab2_pdm_00084417.R
+import com.example.evlab2_pdm_00084417.helpers.ButtonsHelper
 
 
 class ButtonsFragment : Fragment() {
