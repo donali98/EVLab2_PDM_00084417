@@ -11,7 +11,7 @@ import android.widget.ImageView
 
 class PhotosFragment : Fragment() {
 
-    lateinit var imgPhoto:ImageView
+    lateinit var imgPhoto: ImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -20,6 +20,16 @@ class PhotosFragment : Fragment() {
         imgPhoto = view.findViewById(R.id.img_foto)
         imgPhoto.setImageResource(R.drawable.ic_launcher_background)
         return view
+    }
+
+    companion object {
+
+        fun newInstance(param1: Int) =
+                PhotosFragment().apply {
+                    arguments = Bundle().apply {
+                        putInt("resource", param1)
+                }
+        }
     }
 
 

@@ -14,6 +14,7 @@ class ButtonsFragment : Fragment() {
 
     lateinit var buttonsHelper: ButtonsHelper
     lateinit var btnPrev:Button
+    lateinit var btnNext:Button
 
 
     override fun onAttach(context: Context?) {
@@ -26,11 +27,17 @@ class ButtonsFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_buttons, container, false)
         btnPrev = view.findViewById(R.id.btn_prev)
+        btnNext = view.findViewById(R.id.btn_next)
         btnPrev.setOnClickListener {
             buttonsHelper.onPrevClickListener()
         }
+        btnNext.setOnClickListener {
+            buttonsHelper.onNextClickListener()
+        }
+
         return view
     }
+
 
 
 }

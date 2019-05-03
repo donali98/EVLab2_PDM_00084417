@@ -4,4 +4,5 @@ import android.view.View
 
 interface ButtonsHelper {
     fun onPrevClickListener()
+    fun onNextClickListener()
 }
