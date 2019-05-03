@@ -25,19 +25,27 @@ class MainActivity : AppCompatActivity(),ButtonsHelper {
     }
 
     override fun onPrevClickListener() {
-        //Toast.makeText(this,"Hello prev",Toast.LENGTH_LONG).show()
+        Toast.makeText(this,currentPosition.toString(),Toast.LENGTH_LONG).show()
         if(currentPosition!=0){
             currentPosition--
             supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(currentPosition)).commit()
         }
+        else{
+            supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(2)).commit()
+            currentPosition = 2
+        }
     }
 
     override fun onNextClickListener() {
-        //Toast.makeText(this,"Hello next",Toast.LENGTH_LONG).show()
+        Toast.makeText(this,currentPosition.toString(),Toast.LENGTH_SHORT).show()
         if(currentPosition!=2){
             currentPosition++
             supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(currentPosition)).commit()
-
+        }
+        else{
+            Toast.makeText(this,"else ${currentPosition.toString()}",Toast.LENGTH_SHORT).show()
+            currentPosition= 0
+            supportFragmentManager.beginTransaction().replace(R.id.fl_carrete, photosFragments.get(0)).commit()
         }
     }
 
