@@ -14,13 +14,13 @@
             android:id="@+id/btn_prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Anterior" />
+            android:text="@string/name_prev" />
 
         <Button
             android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Siguiente" />
+            android:text="@string/name_next" />
     </LinearLayout>
 
 </FrameLayout>
