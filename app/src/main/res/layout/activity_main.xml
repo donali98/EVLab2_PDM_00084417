@@ -3,12 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <fragment
         android:id="@+id/frm_buttons"
+        android:name="com.example.evlab2_pdm_00084417.ButtonsFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="com.example.evlab2_pdm_00084417.ButtonsFragment" />
+        android:layout_height="wrap_content" />
 
+    <FrameLayout
+        android:id="@+id/fl_carrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+    <!--    <FrameLayout
+        android:id="@+id/pokeInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+android:background="?android:detailsElementBackground"/>-->
 </LinearLayout>
